@@ -1,0 +1,125 @@
+2012-03-10 16:47:05,725 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:47:05,730 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:47:21,928 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:47:21,931 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:49:10,501 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:49:10,503 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:49:58,359 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:49:58,361 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:51:53,120 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:51:53,123 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:51:53,129 INFO [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:51:53,133 INFO [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false, true, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:51:53,142 INFO [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, true, true, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, true, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:51:53,143 INFO [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, true, true, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, true, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:52:39,757 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:52:39,759 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:52:39,766 INFO [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:52:39,774 INFO [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:52:39,777 INFO [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:52:39,781 INFO [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:53:16,015 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:53:16,017 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 16:53:16,022 INFO filter : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:53:16,029 INFO filter : [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:53:16,035 INFO filter : [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 16:53:16,036 INFO filter : [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 17:05:35,487 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:05:35,491 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:05:35,539 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:05:35,540 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:05:35,546 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:05:35,547 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:17,967 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:17,969 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:18,005 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:18,006 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:18,013 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:18,014 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:29,877 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:29,881 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:29,916 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:29,918 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:29,922 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:07:29,922 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:36,701 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:36,703 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:36,739 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:36,739 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:36,743 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:36,744 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:36,746 INFO number of hash-functions: 2 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:36,747 INFO size of filter: 9 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:40,582 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:40,586 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:40,631 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:40,632 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:40,635 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:40,635 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:40,638 INFO number of hash-functions: 2 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:40,639 INFO size of filter: 9 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:44,173 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:44,175 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:44,216 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:44,217 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:44,221 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:44,222 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:44,225 INFO number of hash-functions: 2 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:44,226 INFO size of filter: 9 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:47,681 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:47,684 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:47,721 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:47,723 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:47,726 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:47,727 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:47,729 INFO number of hash-functions: 2 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:08:47,730 INFO size of filter: 9 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:08,302 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:08,305 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:08,338 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:08,339 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:08,343 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:08,344 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:08,347 INFO number of hash-functions: 2 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:08,348 INFO size of filter: 6 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:12,572 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:12,574 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:12,615 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:12,616 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:12,620 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:12,620 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:12,623 INFO number of hash-functions: 2 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:12,624 INFO size of filter: 6 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:17,566 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:17,569 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:17,609 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:17,610 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:17,614 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:17,614 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:17,617 INFO number of hash-functions: 2 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:17,619 INFO size of filter: 6 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:21,865 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:21,869 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:21,907 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:21,908 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:21,914 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:21,915 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:21,918 INFO number of hash-functions: 2 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:11:21,920 INFO size of filter: 6 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:13:24,139 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:13:24,142 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:13:24,181 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:13:24,183 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:13:24,188 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:13:24,189 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:41,297 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:41,299 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:41,339 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:41,340 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:41,343 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:41,344 INFO size of filter: 31 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:49,316 INFO number of hash-functions: 7 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:49,318 INFO size of filter: 202 IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:49,322 INFO filter : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:49,327 INFO filter : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
+2012-03-10 17:40:49,334 INFO filter : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] IN ru.infos.dcn.BloomFilter
