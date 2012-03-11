@@ -8,6 +8,7 @@ package ru.infos.dcn;
  */
 
 import org.apache.log4j.Logger;
+import ru.infos.dcn.exception.FilterFullException;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -19,10 +20,16 @@ import java.util.Random;
  class implements bloom filter (http://en.wikipedia.org/wiki/Bloom_filter)
  */
 public class BloomFilter {
+//    if set true - you will get exception when you put element, but filter is full
+    private boolean safeFilter;
 //  byte filter
     private byte [] filter;
 //    size of filter
     private int filterSize;
+//    elements counter
+    private int elementCounter = 0;
+//    estimated number of elements in filter
+    private int estimatedNumberOfElements;
 //    random keys for generating hash-functions
     private HashSet<String> randomKeys;
 //    number of hash-functions
@@ -39,9 +46,13 @@ public class BloomFilter {
      @param numOfElements estimated number of elements, which will be added in bloom filter
      @param errorProbability probability of malfunction
      @param messageDigest hash function, you want to use
+     @param safeFilter true - if you will get exception when you put element, but filter is full, false - otherwise
      @throws NoSuchAlgorithmException
      */
-    public BloomFilter(int numOfElements, double errorProbability, MessageDigest messageDigest) throws NoSuchAlgorithmException {
+    public BloomFilter(int numOfElements, double errorProbability, MessageDigest messageDigest, boolean safeFilter
+            ) throws NoSuchAlgorithmException {
+        estimatedNumberOfElements = numOfElements;
+        this.safeFilter = safeFilter;
 //        number of hash functions to provide probability of malfunction
         hashFunctionsNumber = (int) (Math.log(1/errorProbability)/LN_2) + 1;
         log.info("number of hash-functions: " + hashFunctionsNumber);
@@ -93,12 +104,16 @@ public class BloomFilter {
      @param object you want add to filter
      @throws NoSuchAlgorithmException
      */
-    public void put(Object object) throws NoSuchAlgorithmException {
+    public void put(Object object) throws NoSuchAlgorithmException, FilterFullException {
 //        go on all hash-functions
         for (String keyWord : randomKeys){
 //            set 1 in correct position
             filter [hash(object, keyWord)] = 1;
         }
+        if(elementCounter > estimatedNumberOfElements){
+            throw new FilterFullException();
+        }
+        elementCounter++;
     }
 
     /**
@@ -126,8 +141,8 @@ public class BloomFilter {
     public static void main(String [] args) throws NoSuchAlgorithmException {
 //        use MD5 as hash-function
         MessageDigest md = MessageDigest.getInstance("MD5");
-        BloomFilter bloomFilter = new BloomFilter(20, 0.01, md);
-        String [] strings = {"hello, world", "let it be", "When I find myself in times of trouble"};
+        BloomFilter bloomFilter = new BloomFilter(2, 0.01, md, true);
+        String [] strings = {"hello, world", "let it be", "When I find myself in times of trouble", "60 revolutions"};
         try {
 //            put strings in bloom filter
             for(String str : strings){
@@ -140,6 +155,8 @@ public class BloomFilter {
             System.out.println("does string exist ? :" + bloomFilter.exist("i've just seen a face"));
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (FilterFullException e){
+            log.warn("you put in filter more elements, than filter can save with allowable error", e);
         }
     }
 }                         
