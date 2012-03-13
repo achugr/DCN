@@ -12,7 +12,7 @@ import ru.infos.dcn.exception.FilterFullException;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
+import java.util.BitSet;
 import java.util.HashSet;
 import java.util.Random;
 
@@ -23,7 +23,7 @@ public class BloomFilter {
 //    if set true - you will get exception when you put element, but filter is full
     private boolean safeFilter;
 //  byte filter
-    private byte [] filter;
+    private BitSet filter;
 //    size of filter
     private int filterSize;
 //    elements counter
@@ -43,24 +43,63 @@ public class BloomFilter {
 
     /**
      Constructor for bloom filter. Size of filter and number of hash-functions evaluated automatically.
+     This is minimal set of arguments, that allows configure bloom filter.
      @param numOfElements estimated number of elements, which will be added in bloom filter
-     @param errorProbability probability of malfunction
+     @param falsePositiveProbability probability of malfunction
      @param messageDigest hash function, you want to use
      @param safeFilter true - if you will get exception when you put element, but filter is full, false - otherwise
      @throws NoSuchAlgorithmException
      */
-    public BloomFilter(int numOfElements, double errorProbability, MessageDigest messageDigest, boolean safeFilter
+    public BloomFilter(int numOfElements, double falsePositiveProbability, MessageDigest messageDigest, boolean safeFilter
             ) throws NoSuchAlgorithmException {
+        if(falsePositiveProbability < Double.MIN_VALUE){
+            falsePositiveProbability = Double.MIN_VALUE;
+        }
         estimatedNumberOfElements = numOfElements;
         this.safeFilter = safeFilter;
-//        number of hash functions to provide probability of malfunction
-        hashFunctionsNumber = (int) (Math.log(1/errorProbability)/LN_2) + 1;
+//        number of hash functions to provide probability of false positive
+//        2^(-k) - probability of false-positive, k - number of hash-functions
+//        => k = (int)(ln(1/probability of FP)/ln2) + 1
+        hashFunctionsNumber = (int) (Math.log(1/falsePositiveProbability)/LN_2) + 1;
         log.info("number of hash-functions: " + hashFunctionsNumber);
-//      size of filter to provide probability of malfunction
-        filterSize = (int)((numOfElements * hashFunctionsNumber)/LN_2) + 1;
+//      size of filter to provide probability of false positive
+//      size of filter = (int) -(number of elements * ln(false positive probability))/(ln(2))^2 + 1
+        filterSize = - (int)((numOfElements * Math.log(falsePositiveProbability)/(LN_2 * LN_2))) + 1;
         log.info("size of filter: " + filterSize);
 
-        filter = new byte[filterSize];
+        filter = new BitSet(filterSize);
+        randomKeys = new HashSet<String>();
+
+//        use MD5 as default hash-function
+        if(messageDigest == null){
+            this.messageDigest = MessageDigest.getInstance("MD5");
+        } else {
+            this.messageDigest = messageDigest;
+        }
+//        set random keys
+        this.setRandomKeys();
+    }
+
+    /**
+     Constructor for jedi ;-) Be careful
+     @param numOfElements estimated number of elements, which will be added in bloom filter
+     @param hashFunctionNumber number of hash-function
+     @param filterSize size of bloom filter
+     @param messageDigest hash function, you want to use
+     @param safeFilter true - if you will get exception when you put element, but filter is full, false - otherwise
+     @throws NoSuchAlgorithmException
+     */
+    public BloomFilter(int numOfElements, int hashFunctionNumber,
+            int filterSize, MessageDigest messageDigest,
+            boolean safeFilter) throws NoSuchAlgorithmException {
+        estimatedNumberOfElements = numOfElements;
+        this.safeFilter = safeFilter;
+        this.hashFunctionsNumber = hashFunctionNumber;
+        log.info("number of hash-functions: " + hashFunctionsNumber);
+
+        log.info("size of filter: " + filterSize);
+
+        filter = new BitSet(filterSize);
         randomKeys = new HashSet<String>();
 
 //        use MD5 as default hash-function
@@ -108,7 +147,7 @@ public class BloomFilter {
 //        go on all hash-functions
         for (String keyWord : randomKeys){
 //            set 1 in correct position
-            filter [hash(object, keyWord)] = 1;
+            filter.set(hash(object, keyWord));
         }
         if(elementCounter > estimatedNumberOfElements){
             throw new FilterFullException();
@@ -124,7 +163,7 @@ public class BloomFilter {
      */
     public boolean exist(Object object) throws NoSuchAlgorithmException {
         for(String keyWord : randomKeys){
-            if (filter[hash(object, keyWord)] == 0){
+            if (!filter.get(hash(object, keyWord))){
                 return false;
             }
         }
@@ -133,30 +172,10 @@ public class BloomFilter {
 
     /**
      print current state of bloom filter in log
+     like so: {1, 4, 6, 10, ..., i, ..., n}
+     where i - position of true value in BitSet
      */
     public void print(){
-        log.info("filter : " + Arrays.toString(filter));
-    }
-
-    public static void main(String [] args) throws NoSuchAlgorithmException {
-//        use MD5 as hash-function
-        MessageDigest md = MessageDigest.getInstance("MD5");
-        BloomFilter bloomFilter = new BloomFilter(2, 0.01, md, true);
-        String [] strings = {"hello, world", "let it be", "When I find myself in times of trouble", "60 revolutions"};
-        try {
-//            put strings in bloom filter
-            for(String str : strings){
-                bloomFilter.put(str);
-                bloomFilter.print();
-            }
-            for(String str : strings){
-                System.out.println("does string " +str+ " exist ? :" + bloomFilter.exist(str));
-            }
-            System.out.println("does string exist ? :" + bloomFilter.exist("i've just seen a face"));
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (FilterFullException e){
-            log.warn("you put in filter more elements, than filter can save with allowable error", e);
-        }
+        log.info("filter : " + filter.toString());
     }
 }                         

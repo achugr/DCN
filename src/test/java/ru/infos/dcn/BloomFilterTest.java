@@ -21,7 +21,9 @@ public class BloomFilterTest extends Assert {
             BloomFilter bloomFilter = new BloomFilter(20, 0.01, null, true);
             bloomFilter.put("hello");
             bloomFilter.put("world");
+            bloomFilter.print();
         }
+
     }
 
     @Test
@@ -52,16 +54,16 @@ public class BloomFilterTest extends Assert {
     }
 
 //    this test might be failed, because probability of error is 0.5
-    @Test
-    public void existElementFailedTest() throws NoSuchAlgorithmException, FilterFullException {
-        {
-            BloomFilter bloomFilter = new BloomFilter(2, 0.5, null, true);
-            bloomFilter.put(1);
-            bloomFilter.put(2);
-            assertEquals(bloomFilter.exist(1), true);
-            assertEquals(bloomFilter.exist(2), true);
-            assertEquals(bloomFilter.exist(5), false);
-        }
-    }
+//    @Test
+//    public void existElementFailedTest() throws NoSuchAlgorithmException, FilterFullException {
+//        {
+//            BloomFilter bloomFilter = new BloomFilter(2, 0.5, null, true);
+//            bloomFilter.put(1);
+//            bloomFilter.put(2);
+//            assertEquals(bloomFilter.exist(1), true);
+//            assertEquals(bloomFilter.exist(2), true);
+//            assertEquals(bloomFilter.exist(5), false);
+//        }
+//    }
 
 }
