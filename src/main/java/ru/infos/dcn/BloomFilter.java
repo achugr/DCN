@@ -19,7 +19,7 @@ import java.util.Random;
 /**
  class implements bloom filter (http://en.wikipedia.org/wiki/Bloom_filter)
  */
-public class BloomFilter {
+public class BloomFilter implements BloomFilterInterface{
 //    if set true - you will get exception when you put element, but filter is full
     private boolean safeFilter;
 //  byte filter
@@ -178,4 +178,6 @@ public class BloomFilter {
     public void print(){
         log.info("filter : " + filter.toString());
     }
-}                         
+
+}
+
