@@ -17,12 +17,10 @@ public class BloomFilterTest extends Assert {
 
     @Test
     public void addElementTest() throws NoSuchAlgorithmException, FilterFullException {
-        {
             BloomFilter bloomFilter = new BloomFilter(20, 0.01, null, true);
             bloomFilter.put("hello");
             bloomFilter.put("world");
             bloomFilter.print();
-        }
     }
 
     @Test
@@ -50,6 +48,22 @@ public class BloomFilterTest extends Assert {
             assertEquals(bloomFilter.exist(object), true);
             assertEquals(bloomFilter.exist(new Object()), false);
         }
+    }
+
+    @Test
+    public void filterFullExceptionTest() throws NoSuchAlgorithmException {
+        BloomFilter bloomFilter = new BloomFilter(3, 0.01, null, true);
+        boolean exceptionThrown = false;
+        try {
+            bloomFilter.put(1);
+            bloomFilter.put(2);
+            bloomFilter.put(3);
+            bloomFilter.put(4);
+        } catch (FilterFullException e) {
+            exceptionThrown = true;
+            e.printStackTrace(); 
+        }
+        assertEquals(exceptionThrown, true);
     }
 
 }

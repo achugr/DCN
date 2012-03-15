@@ -149,7 +149,7 @@ public class BloomFilter implements BloomFilterInterface{
 //            set 1 in correct position
             filter.set(hash(object, keyWord));
         }
-        if(elementCounter > estimatedNumberOfElements){
+        if(elementCounter >= estimatedNumberOfElements){
             throw new FilterFullException();
         }
         elementCounter++;
