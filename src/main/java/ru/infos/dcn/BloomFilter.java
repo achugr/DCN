@@ -51,7 +51,7 @@ public class BloomFilter implements BloomFilterInterface{
      @throws NoSuchAlgorithmException
      */
     public BloomFilter(int numOfElements, double falsePositiveProbability, MessageDigest messageDigest, boolean safeFilter
-            ) throws NoSuchAlgorithmException {
+            ) {
         if(falsePositiveProbability < Double.MIN_VALUE){
             falsePositiveProbability = Double.MIN_VALUE;
         }
@@ -72,7 +72,11 @@ public class BloomFilter implements BloomFilterInterface{
 
 //        use MD5 as default hash-function
         if(messageDigest == null){
-            this.messageDigest = MessageDigest.getInstance("MD5");
+            try {
+                this.messageDigest = MessageDigest.getInstance("MD5");
+            } catch (NoSuchAlgorithmException e) {
+                throw new IllegalArgumentException("this MessageDigest is not available");
+            }
         } else {
             this.messageDigest = messageDigest;
         }
@@ -91,7 +95,7 @@ public class BloomFilter implements BloomFilterInterface{
      */
     public BloomFilter(int numOfElements, int hashFunctionNumber,
             int filterSize, MessageDigest messageDigest,
-            boolean safeFilter) throws NoSuchAlgorithmException {
+            boolean safeFilter) {
         estimatedNumberOfElements = numOfElements;
         this.safeFilter = safeFilter;
         this.hashFunctionsNumber = hashFunctionNumber;
@@ -104,7 +108,11 @@ public class BloomFilter implements BloomFilterInterface{
 
 //        use MD5 as default hash-function
         if(messageDigest == null){
-            this.messageDigest = MessageDigest.getInstance("MD5");
+            try {
+                this.messageDigest = MessageDigest.getInstance("MD5");
+            } catch (NoSuchAlgorithmException e) {
+                throw new IllegalArgumentException("this MessageDigest is not available");
+            }
         } else {
             this.messageDigest = messageDigest;
         }
@@ -141,9 +149,8 @@ public class BloomFilter implements BloomFilterInterface{
     /**
      put object in bloom filter
      @param object you want add to filter
-     @throws NoSuchAlgorithmException
      */
-    public void put(Object object) throws NoSuchAlgorithmException, FilterFullException {
+    public void put(Object object) throws FilterFullException {
 //        go on all hash-functions
         for (String keyWord : randomKeys){
 //            set 1 in correct position
@@ -159,9 +166,8 @@ public class BloomFilter implements BloomFilterInterface{
      verify, is this object in bloom-filter
      @param object object, you want to verify
      @return true - exist, false - otherwise
-     @throws NoSuchAlgorithmException
      */
-    public boolean exist(Object object) throws NoSuchAlgorithmException {
+    public boolean exist(Object object) {
         for(String keyWord : randomKeys){
             if (!filter.get(hash(object, keyWord))){
                 return false;
