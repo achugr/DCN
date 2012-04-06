@@ -14,6 +14,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.BitSet;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -45,7 +46,7 @@ public class BloomFilter implements BloomFilterInterface{
      Constructor for bloom filter. Size of filter and number of hash-functions evaluated automatically.
      This is minimal set of arguments, that allows configure bloom filter.
      @param numOfElements estimated number of elements, which will be added in bloom filter
-     @param falsePositiveProbability probability of malfunction
+     @param falsePositiveProbability probability of false positive
      @param messageDigest hash function, you want to use
      @param safeFilter true - if you will get exception when you put element, but filter is full, false - otherwise
      @throws NoSuchAlgorithmException
@@ -121,6 +122,28 @@ public class BloomFilter implements BloomFilterInterface{
     }
 
     /**
+     * static BloomFilter generator
+     * @param objects objects to put in filter
+     * @param falsePositiveProbability probability of malfunction
+     * @param messageDigest hash function, you want to use
+     * @param safeFilter true - if you will get exception when you put element, but filter is full, false - otherwise
+     * @return bloom filter, which contains objects from argument
+     */
+    public static BloomFilter createBloomFilter(List<Object> objects, double falsePositiveProbability, MessageDigest messageDigest, boolean safeFilter){
+//        create bloom filter, size = objects.size()
+        BloomFilter bloomFilter = new BloomFilter(objects.size(), falsePositiveProbability, messageDigest, true);
+//        put objects into filter
+        for(Object object : objects){
+            try {
+                bloomFilter.put(object);
+            } catch (FilterFullException e) {
+//                catch exception, because in this case we can't became FilterFullException exception
+            }
+        }
+        return bloomFilter;
+    }
+
+    /**
      fill hash-set of random keys
      */
     private void setRandomKeys(){
@@ -183,6 +206,14 @@ public class BloomFilter implements BloomFilterInterface{
      */
     public void print(){
         log.info("filter : " + filter.toString());
+    }
+
+    /**
+
+     @param name your name
+     */
+    public void sayHello(String name){
+        System.out.print("hello" + name);
     }
 
 }
