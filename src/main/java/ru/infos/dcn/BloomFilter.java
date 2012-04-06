@@ -129,7 +129,7 @@ public class BloomFilter implements BloomFilterInterface{
      * @param safeFilter true - if you will get exception when you put element, but filter is full, false - otherwise
      * @return bloom filter, which contains objects from argument
      */
-    public static BloomFilter createBloomFilter(List<Object> objects, double falsePositiveProbability, MessageDigest messageDigest, boolean safeFilter){
+    public static BloomFilter newInstance(List<Object> objects, double falsePositiveProbability, MessageDigest messageDigest, boolean safeFilter){
 //        create bloom filter, size = objects.size()
         BloomFilter bloomFilter = new BloomFilter(objects.size(), falsePositiveProbability, messageDigest, true);
 //        put objects into filter
