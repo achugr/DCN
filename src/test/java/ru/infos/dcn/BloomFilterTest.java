@@ -29,24 +29,24 @@ public class BloomFilterTest extends Assert {
             BloomFilter bloomFilter = new BloomFilter(3, 0.01, null, true);
             bloomFilter.put("hello");
             bloomFilter.put("world");
-            assertEquals(bloomFilter.exist("hello"), true);
-            assertEquals(bloomFilter.exist("world"), true);
-            assertEquals(bloomFilter.exist("bye"), false);
+            assertEquals(bloomFilter.isExist("hello"), true);
+            assertEquals(bloomFilter.isExist("world"), true);
+            assertEquals(bloomFilter.isExist("bye"), false);
         }
         {
             BloomFilter bloomFilter = new BloomFilter(3, 0.01, null, true);
             bloomFilter.put(1);
             bloomFilter.put(2);
-            assertEquals(bloomFilter.exist(1), true);
-            assertEquals(bloomFilter.exist(2), true);
-            assertEquals(bloomFilter.exist(5), false);
+            assertEquals(bloomFilter.isExist(1), true);
+            assertEquals(bloomFilter.isExist(2), true);
+            assertEquals(bloomFilter.isExist(5), false);
         }
         {
             BloomFilter bloomFilter = new BloomFilter(3, 0.01, null, true);
             Object object = new Object();
             bloomFilter.put(object);
-            assertEquals(bloomFilter.exist(object), true);
-            assertEquals(bloomFilter.exist(new Object()), false);
+            assertEquals(bloomFilter.isExist(object), true);
+            assertEquals(bloomFilter.isExist(new Object()), false);
         }
     }
 

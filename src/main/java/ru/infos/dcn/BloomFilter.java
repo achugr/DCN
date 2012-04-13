@@ -124,14 +124,15 @@ public class BloomFilter implements BloomFilterInterface{
     /**
      * static BloomFilter generator
      * @param objects objects to put in filter
+     * @param reserveSize reserve size, probably you will put elements into filter after fill with objects
      * @param falsePositiveProbability probability of malfunction
      * @param messageDigest hash function, you want to use
      * @param safeFilter true - if you will get exception when you put element, but filter is full, false - otherwise
      * @return bloom filter, which contains objects from argument
      */
-    public static BloomFilter newInstance(List<Object> objects, double falsePositiveProbability, MessageDigest messageDigest, boolean safeFilter){
+    public static BloomFilter newInstance(List<Object> objects, int reserveSize, double falsePositiveProbability, MessageDigest messageDigest, boolean safeFilter){
 //        create bloom filter, size = objects.size()
-        BloomFilter bloomFilter = new BloomFilter(objects.size(), falsePositiveProbability, messageDigest, true);
+        BloomFilter bloomFilter = new BloomFilter(objects.size() + reserveSize, falsePositiveProbability, messageDigest, true);
 //        put objects into filter
         for(Object object : objects){
             try {
@@ -188,9 +189,9 @@ public class BloomFilter implements BloomFilterInterface{
     /**
      verify, is this object in bloom-filter
      @param object object, you want to verify
-     @return true - exist, false - otherwise
+     @return true - isExist, false - otherwise
      */
-    public boolean exist(Object object) {
+    public boolean isExist(Object object) {
         for(String keyWord : randomKeys){
             if (!filter.get(hash(object, keyWord))){
                 return false;
@@ -207,14 +208,5 @@ public class BloomFilter implements BloomFilterInterface{
     public void print(){
         log.info("filter : " + filter.toString());
     }
-
-    /**
-
-     @param name your name
-     */
-    public void sayHello(String name){
-        System.out.print("hello" + name);
-    }
-
 }
 
